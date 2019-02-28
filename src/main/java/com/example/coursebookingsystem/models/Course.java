@@ -1,6 +1,7 @@
 package com.example.coursebookingsystem.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import java.util.List;
 @Entity
 @Table(name = "courses")
 public class Course {
-
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

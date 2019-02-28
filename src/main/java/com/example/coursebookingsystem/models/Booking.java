@@ -23,15 +23,22 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    public Booking(String date, Course course) {
-
+    public Booking(String date, Course course, Customer customer) {
         this.date = date;
         this.course = course;
+        this.customer = customer;
     }
 
     public Booking() {
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public Long getId() {
         return id;
