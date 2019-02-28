@@ -17,11 +17,12 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "course_id", nullable = false)
-    private Course course
+    private Course course;
 
-    public Booking(Long id, String date) {
+    public Booking(Long id, String date, Course course) {
         this.id = id;
         this.date = date;
+        this.course = course;
     }
 
     public Booking() {
@@ -42,5 +43,13 @@ public class Booking {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }
