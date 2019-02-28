@@ -1,4 +1,4 @@
-package com.example.coursebookingsystem.repositories;
+package com.example.coursebookingsystem.repositories.customerRepository;
 
 import com.example.coursebookingsystem.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
