@@ -23,8 +23,8 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    public Booking(Long id, String date, Course course) {
-        this.id = id;
+    public Booking(String date, Course course) {
+
         this.date = date;
         this.course = course;
     }

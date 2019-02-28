@@ -28,8 +28,8 @@ public class Customer {
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    public Customer(Long id, String name, String town, int age) {
-        this.id = id;
+    public Customer(String name, String town, int age) {
+
         this.name = name;
         this.town = town;
         this.age = age;
