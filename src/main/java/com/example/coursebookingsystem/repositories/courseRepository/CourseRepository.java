@@ -14,5 +14,6 @@ public interface CourseRepository extends JpaRepository <Course, Long>,  CourseR
 //     want List<Course>
 
     List<Course> findCourseByStarRating(int starRating);
+    List<Course> getAllCoursesByCustomerId(Long id);
 
 }

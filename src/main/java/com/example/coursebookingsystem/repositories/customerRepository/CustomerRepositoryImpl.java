@@ -30,17 +30,12 @@ public class CustomerRepositoryImpl {
         try{
             Criteria cr = session.createCriteria(Customer.class);
             cr.createAlias("bookings", "bookingAlias");
-            cr.createAlias("bookingAlias.course", "courseAlias");
-            cr.add(Restrictions.eq("courseAlias.id", courseId));
+            cr.createAlias("bookingAlias.course_id", "courseAlias");
+            cr.add(Restrictions.eq("courseAlias.name", courseId));
             result = cr.list();
         }catch (HibernateException ex){
             ex.printStackTrace();
         }
-
-
-
-
-
                 return result;
 
     }
